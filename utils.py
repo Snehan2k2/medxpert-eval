@@ -137,4 +137,5 @@ def final_accuracy(outputs):
 def final_accuracy_at_k(outputs, n):
     ks = [k for k in [1,2,4,8,16] if k <= n]
     results = evaluate_pass_at_k(outputs, ks, max_workers=25)
-    print(results)
+    for k, v in results.items():
+        print(f"pass@{k}: {v:.3f}")
