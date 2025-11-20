@@ -67,8 +67,6 @@ def general_inference(args, llm_agent):
     with open(input_path, 'r', encoding='utf-8') as f:
         inputs = [json.loads(line) for line in f if line.strip()]
 
-    inputs = inputs[:6]
-
     start = len(outputs)
     end = len(inputs)
 
