@@ -117,8 +117,7 @@ def evaluate_all(data, max_workers=20):
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = []
         for item in data:
-            model_ans = get_model_answer_after_think(item["response"]) 
-            model_ans = item['response'][0]
+            model_ans = get_model_answer_after_think(item["response"][0]) 
             correct_ans = get_correct_answer_string(item)
             futures.append(executor.submit(gpt_score, model_ans, correct_ans))
 
