@@ -1,6 +1,6 @@
 # MedXpertQA Evaluation
 
-This repository is a refined and extended modification of the **official MedXpertQA evaluation code**
+This repository is a refined and extended modification of the **official MedXpertQA evaluation code**.
 The original evaluation framework performs **two-step scoring**, but this version simplifies and accelerates the workflow by:
 
 - Performing the evaluation in **a single step**  
@@ -34,4 +34,4 @@ python main.py --num-threads 64 \
 ## 🔗 Resources
 
 - **Official MedXpertQA Evaluation Code:**  
-  https://github.com/CMU-TBD/MedXpertQA
+  https://github.com/TsinghuaC3I/MedXpertQA
