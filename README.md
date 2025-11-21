@@ -7,7 +7,7 @@ The original evaluation framework performs **two-step scoring**, but this versio
 - Using an **LLM-as-a-judge** to score responses directly  
 - Preserving **all original prompts and task designs** from the official MedXpertQA benchmark  
 
-The goal of this repository is to provide a faster and more reliable evaluation pipeline. The original MedXpertQA code uses a two-step process, where the second step forces the model to output the final answer choice. Many smaller models fail at this instruction-following step even when they know the answer, leading to misleading scores. This version replaces that with a single evaluation pass and an LLM-as-a-judge, avoiding instruction-following failures while staying aligned with the benchmark’s intent.
+The goal of this repository is to provide a faster and more reliable evaluation pipeline. The original MedXpertQA code uses a *two-step* process, where the second step forces the model to output the final answer choice. Many smaller models fail at this instruction-following step even when they know the answer, leading to misleading scores. This version replaces that with a single evaluation pass and an LLM-as-a-judge, avoiding instruction-following failures while staying aligned with the benchmark’s intent.
 
 ## ⚙️ Usage
 
