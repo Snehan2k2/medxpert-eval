@@ -28,13 +28,21 @@ class APIAgent(LLMAgent):
         self.model_url = f"http://localhost:{port}/v1/chat/completions"
 
     def get_response(self, messages: List[dict]) -> str:
-        payload = {
-            "messages": messages,
-            "max_tokens": self.max_tokens,
-            "temperature": self.temperature,
-            "n" : self.num_gen,
-            "seed": 0,
-        }
+        if self.num_gen == 1:
+            payload = {
+                "messages": messages,
+                "max_tokens": self.max_tokens,
+                "temperature": self.temperature,
+                "n" : self.num_gen,
+                "seed": 0,
+            }
+        else:
+            payload = {
+                "messages": messages,
+                "max_tokens": self.max_tokens,
+                "n" : self.num_gen,
+                "seed": 0,
+            }
         headers = {
             "Content-Type": "application/json"
         }
