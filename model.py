@@ -41,6 +41,7 @@ class APIAgent(LLMAgent):
                 "messages": messages,
                 "max_tokens": self.max_tokens,
                 "n" : self.num_gen,
+                "temperature": self.temperature,
                 "seed": 0,
             }
         headers = {
